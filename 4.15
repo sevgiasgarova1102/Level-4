@@ -1,0 +1,22 @@
+level4.15
+#include <iostream>
+using namespace std;
+
+int main() {
+    int eded;
+    int enBoyuk = 0;
+
+    cout << "Ededleri daxil edin (0 daxil edəndə bitir): " << endl;
+
+    cin >> eded;
+    while (eded != 0) {
+        if (eded > enBoyuk) {
+            enBoyuk = eded;
+        }
+        cin >> eded;
+    }
+
+    cout << "En boyuk eded: " << enBoyuk << endl;
+
+    return 0;
+}
