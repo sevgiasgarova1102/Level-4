@@ -1,0 +1,20 @@
+level4.7
+#include <iostream>
+using namespace std;
+
+int main() {
+    cout << "Armstrong ededler: ";
+    for (int i = 1; i < 1000; i++) {
+        int m = i;
+        int cem = 0;
+        while (m != 0) {
+            int r = m % 10;
+            cem += r * r * r; // 3 rəqəmli ədədlər üçün kub
+            m /= 10;
+        }
+        if (cem == i) {
+            cout << i << " ";
+        }
+    }
+    return 0;
+}
