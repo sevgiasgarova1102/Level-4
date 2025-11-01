@@ -1,0 +1,31 @@
+level4.6
+#include <iostream>
+using namespace std;
+
+int main() {
+    int N;
+    cout << "Nece eded daxil edeceksiniz? ";
+    cin >> N;
+
+    int eded;
+    int maxEded = -1000000; 
+    int minEded = 1000000;  //
+    int cem = 0;
+
+    for (int i = 1; i <= N; i++) {
+        cout << "Ededi daxil edin: ";
+        cin >> eded;
+
+        if (eded > maxEded) maxEded = eded; // daha böyük ədəd tapıldı
+        if (eded < minEded) minEded = eded; // daha kiçik ədəd tapıldı
+
+        cem = cem + eded; 
+  
+    }
+
+    cout << "En boyuk eded: " << maxEded << endl;
+    cout << "En kicik eded: " << minEded << endl;
+    cout << "Ortalama: " << cem / N << endl;
+
+    return 0;
+}
