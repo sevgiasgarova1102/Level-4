@@ -1,0 +1,50 @@
+level4.10
+#include <iostream>
+using namespace std;
+
+int main() {
+    double netice;
+    cout << "Ilk ededi daxil edin: ";
+    cin >> netice;
+
+    while (true) {
+        char emel;
+        double eded;
+
+        cout << "Emel (+,-,*,/) ve ya q bitirmek ucun: ";
+        cin >> emel;
+
+        if (emel == 'q') {
+            break; // proqramı bitir
+        }
+
+        cout << "Ededi daxil edin: ";
+        cin >> eded;
+
+        if (emel == '+') {
+            netice = netice + eded;
+        }
+        else if (emel == '-') {
+            netice = netice - eded;
+        }
+        else if (emel == '*') {
+            netice = netice * eded;
+        }
+        else if (emel == '/') {
+            if (eded != 0) {
+                netice = netice / eded;
+            }
+            else {
+                cout << "0-a bolmek olmaz!\n";
+            }
+        }
+        else {
+            cout << "Yanlis emel!\n";
+            continue; // səhv əməliyyat daxil edilərsə dövrün sonuna keç
+        }
+
+        cout << "Netice: " << netice << endl;
+    }
+
+    return 0;
+}
