@@ -1,0 +1,16 @@
+level4.1
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n, cem = 0;
+    cout << "Eded daxil edin: ";
+    cin >> n;
+
+    for (int i = 2; i <= n; i += 2) {
+        cem += i * i;
+    }
+
+    cout << "Cut ededlerin kvadratlari cemi = " << cem;
+    return 0;
+}
