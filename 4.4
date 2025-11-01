@@ -1,0 +1,14 @@
+level4.4
+#include <iostream>
+using namespace std;
+
+int main() {
+    cout << "Reqemleri cemi 10 olan 3 reqemli ededler: ";
+    for (int i = 100; i <= 999; i++) {
+        int cem = (i / 100) + ((i / 10) % 10) + (i % 10);
+        if (cem == 10) {
+            cout << i << " ";
+        }
+    }
+    return 0;
+}
