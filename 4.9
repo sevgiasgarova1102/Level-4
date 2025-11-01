@@ -1,0 +1,23 @@
+level4.9
+#include <iostream>
+using namespace std;
+
+int main() {
+    cout << "1-den 1000-e qeder palindrome ededler: ";
+
+    for (int i = 1; i <= 1000; i++) {
+        int n = i;
+        int ters = 0;
+
+        while (n > 0) {
+            ters = ters * 10 + n % 10; // ədədin rəqəmini tərs sıraya əlavə et
+            n = n / 10;                // son rəqəmi sil
+        }
+
+        if (i == ters) {
+            cout << i << " ";
+        }
+    }
+
+    return 0;
+}
