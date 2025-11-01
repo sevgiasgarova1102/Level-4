@@ -1,0 +1,21 @@
+level4.2
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n, say = 0;
+    cout << "Eded daxil edin: ";
+    cin >> n;
+
+    if (n == 0) {
+    say = 1; // 0 bir rəqəm sayılır
+    {
+
+    while (n != 0) {
+        n /= 10;
+        say++;
+    }
+
+    cout << "Reqemlerin sayi = " << say;
+    return 0;
+}
