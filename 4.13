@@ -1,0 +1,29 @@
+level4.13
+#include <iostream>
+using namespace std;
+
+int main() {
+    int N;
+    cout << "Nece eded daxil edeceksiniz? ";
+    cin >> N;
+
+    int eded;
+    int cut_cem = 0; // cüt indeksdəki ədədlərin cəmi
+    int tek_cem = 0; // tək indeksdəki ədədlərin cəmi
+
+    for (int i = 1; i <= N; i++) {
+        cout << i << ". ededi daxil edin: ";
+        cin >> eded;
+
+        if (i % 2 == 0) { // i cütdür
+            cut_cem += eded;
+        } else {          // i təkdir
+            tek_cem += eded;
+        }
+    }
+
+    cout << "Tek indeksdeki ededlerin cemi: " << tek_cem << endl;
+    cout << "Cut indeksdeki ededlerin cemi: " << cut_cem << endl;
+
+    return 0;
+}
